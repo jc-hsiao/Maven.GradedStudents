@@ -42,8 +42,7 @@ public class Classroom {
     public double getAverageExamScore(){
         double sum = 0;
         for(Student s : students){
-            for(int i = 0; i<s.getNumberOfExamsTaken(); i++)
-                sum += s.getExamScores(i+1);
+            sum += s.getAverageExamScore();
         }
         return sum/students.size();
     }
